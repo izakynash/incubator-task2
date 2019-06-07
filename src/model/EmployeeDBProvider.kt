@@ -1,8 +1,6 @@
-package provider
+package model
 
-import model.Employee
-
-class EmployeeProvider {
+class EmployeeDBProvider {
 
     companion object {
 

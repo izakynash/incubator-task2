@@ -1,11 +1,11 @@
 package presenter
 
 import model.Employee
-import provider.EmployeeProvider
+import model.EmployeeDBProvider
 
 class EmployeeImpl: IEmployee {
 
-    val employeeList = EmployeeProvider.employeeList
+    val employeeList = EmployeeDBProvider.employeeList
 
 
     override fun addNewEmp(emp: Employee): Boolean {
@@ -22,7 +22,7 @@ class EmployeeImpl: IEmployee {
 
     override fun listEmpsBySurname(surname: String): MutableList<Employee> {
 
-        val employeeListWithoutPos = EmployeeProvider.employeeListWithoutPos
+        val employeeListWithoutPos = EmployeeDBProvider.employeeListWithoutPos
 
         val listEmpsSameSurname: MutableList<Employee> = mutableListOf()
 
